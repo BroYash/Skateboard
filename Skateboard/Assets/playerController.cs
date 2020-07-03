@@ -48,7 +48,7 @@ public class playerController : MonoBehaviour
 
                 _animator.SetBool("jump", true);
             }
-            Debug.Log("Player is grounded");
+            //Debug.Log("Player is grounded");
         }
 
         _moveDir.y -= gravity * Time.deltaTime;
