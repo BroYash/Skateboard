@@ -62,7 +62,7 @@ public class playerController : MonoBehaviour
     public void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
-
+        sk.isGrounded = false;
         animator.SetBool("jump", true);
     }
 
