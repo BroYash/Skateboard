@@ -317,8 +317,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62046717}
-  m_LocalRotation: {x: 0.06509804, y: 0.16005634, z: -0.010578653, w: 0.9849022}
-  m_LocalPosition: {x: -4.7511997, y: 7.3297744, z: -15.597568}
+  m_LocalRotation: {x: 0.21914133, y: 0.012705561, z: -0.002853931, w: 0.97560626}
+  m_LocalPosition: {x: 2.0474231, y: 6.2411203, z: -11.8747425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 776357603}
   - component: {fileID: 776357602}
   - component: {fileID: 776357601}
+  - component: {fileID: 776357604}
   m_Layer: 0
   m_Name: skateboard
   m_TagString: Untagged
@@ -753,6 +754,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776357599}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &776357604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776357599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6fc66047abf1a459512b2179b70f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &781194267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1088,8 +1101,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 8722938275626799597}
+  m_Follow: {fileID: 8722938275626799597}
   m_Lens:
     FieldOfView: 53.1
     OrthographicSize: 5
@@ -1112,8 +1125,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954583503}
-  m_LocalRotation: {x: 0.06509804, y: 0.16005634, z: -0.010578653, w: 0.9849022}
-  m_LocalPosition: {x: -4.7511997, y: 7.3297744, z: -15.597568}
+  m_LocalRotation: {x: 0.21914133, y: 0.012705561, z: -0.002853931, w: 0.97560626}
+  m_LocalPosition: {x: 2.0474231, y: 6.2411203, z: -11.8747425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1549326812}
@@ -1617,7 +1630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_FollowOffset: {x: 0, y: 4.7311206, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1764,7 +1777,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774605237}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4, y: 0.58, z: -5.59}
+  m_LocalPosition: {x: 2.4, y: 2.05, z: -5.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3074,7 +3087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf67566658e3c941b95bef1cebd0ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 5
   jumpHeight: 10
   turnSpeed: 5
   spawnPoint: {fileID: 1774605237}
@@ -3905,7 +3918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8722938275626700237}
   m_LocalRotation: {x: 0, y: -0.013022124, z: 0, w: -0.99991524}
-  m_LocalPosition: {x: 2.3078437, y: 0.43887934, z: -1.8781335}
+  m_LocalPosition: {x: 2.3078437, y: 1.51, z: -1.8781335}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 776357600}
