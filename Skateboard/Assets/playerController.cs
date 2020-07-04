@@ -4,54 +4,81 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float speed = 5f;
-    public float rotationspeed = 240f;
-    public float gravity = 20f;
-    public float jumpSpeed = 10f;
+    public float jumpHeight = 10f;
+    public float turnSpeed = 5f;
+    public GameObject spawnPoint;
 
-    private Animator _animator;
-    private CharacterController _characterController;
-    private Vector3 _moveDir = new Vector3();
+
+    private bool isGrounded;
+    private Animator animator;
+    private Rigidbody rb;
+    private Collider coll;
+
+    private void Awake()
+    {
+        this.transform.position = this.spawnPoint.transform.position;
+        this.transform.Rotate(0, 0, 0);
+        
+    }
 
     void Start()
     {
-        _animator = GetComponent<Animator>();
-        _characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        coll = GetComponent<Collider>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, speed);
+        Movement();
+    }
+
+
+    public void Movement()
     {
         float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
 
-        if (v < 0)
-            v = 0;
-
-        transform.Rotate(0, h * rotationspeed * Time.deltaTime, 0);
-
-        if (_characterController.isGrounded)
+        if(h < 0)
         {
-            bool move = (v > 0) || (h != 0);
-
-            //_animator.SetBool("run", move);
-
-            _moveDir = Vector3.forward * (v);
-            _moveDir = transform.TransformDirection(_moveDir);
-            _moveDir *= speed;
-            _animator.SetBool("jump", false);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                
-                _moveDir.y = jumpSpeed;
-
-                _animator.SetBool("jump", true);
-            }
-            //Debug.Log("Player is grounded");
+            rb.velocity = new Vector3(-turnSpeed, rb.velocity.y, rb.velocity.z);
+        }
+        else if (h > 0)
+        {
+            rb.velocity = new Vector3(turnSpeed, rb.velocity.y, rb.velocity.z);
         }
 
-        _moveDir.y -= gravity * Time.deltaTime;
-        _characterController.Move(_moveDir * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+                Jump();
+        }
+
     }
+
+
+    public void Jump()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
+
+        animator.SetBool("jump", true);
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    public void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
+        }
+    }
+
+
 }
