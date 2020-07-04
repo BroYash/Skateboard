@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Skateboard : MonoBehaviour
 {
-    public static bool isGrounded;
+    public bool isGrounded;
     private Collider coll;
 
     private void Start()

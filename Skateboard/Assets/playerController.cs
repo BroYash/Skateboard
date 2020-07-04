@@ -14,6 +14,7 @@ public class playerController : MonoBehaviour
     private Animator animator;
     private Rigidbody rb;
     private Collider coll;
+    private Skateboard sk;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class playerController : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
+        sk = FindObjectOfType<Skateboard>();
     }
 
     void FixedUpdate()
@@ -49,7 +51,7 @@ public class playerController : MonoBehaviour
             rb.velocity = new Vector3(turnSpeed, rb.velocity.y, rb.velocity.z);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && sk.isGrounded)
         {
                 Jump();
         }
