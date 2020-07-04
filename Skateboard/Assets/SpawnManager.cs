@@ -23,6 +23,6 @@ public class SpawnManager : MonoBehaviour
     {
         Instantiate(roadPrefab, transform.position = newRoadPosition, Quaternion.identity);
 
-        newRoadPosition = newRoadPosition + new Vector3(0,0, 42.6f + -1.878134f);
+        newRoadPosition = newRoadPosition + new Vector3(0,0, 42.6f + 1.878134f);
     }
 }
