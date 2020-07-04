@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 3181351914838840203}
   m_Layer: 0
   m_Name: road_prefab
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +116,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 525
@@ -266,6 +274,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -342,6 +354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 525
@@ -416,6 +432,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -492,6 +512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: -475
@@ -566,6 +590,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -642,6 +670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 525
@@ -716,6 +748,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -792,6 +828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 525
@@ -866,6 +906,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -942,6 +986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: -475
@@ -1016,6 +1064,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1092,6 +1144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: -475
@@ -1166,6 +1222,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1242,6 +1302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: -475
@@ -1317,6 +1381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Road_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x
       value: -475
@@ -1391,6 +1459,10 @@ PrefabInstance:
     - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_Name
       value: SM_Env_Road_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135246, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 481848, guid: fa07ca939fb86614e840203d85f23f08, type: 3}
       propertyPath: m_LocalPosition.x

@@ -5,7 +5,8 @@ using UnityEngine;
 public class playerAnimationController : MonoBehaviour
 {
     private Animator animator;
-    private CharacterController _characterController;
+    [SerializeField]private  Skateboard skateboard;
+    [SerializeField]private playerController pc;
 
     public string playerCombo = "";
     public int comboCount = 0;
@@ -15,21 +16,24 @@ public class playerAnimationController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_characterController.isGrounded)
+        if (skateboard.isGrounded)
         {
             animator.SetTrigger("idle");
+            animator.SetBool("jump", false);
+        }
+        else
+        {
+            animator.SetBool("jump", true);
         }
         /*
         if ((Input.GetKey("j")) && (Input.GetKey("l")))
         {
-
             animator.SetBool("grind", true);
         }
         else
@@ -38,7 +42,7 @@ public class playerAnimationController : MonoBehaviour
         }*/
 
 
-        if (Input.GetKeyDown("k") && _characterController.isGrounded == false)
+        if (Input.GetKeyDown("k") && skateboard.isGrounded == false)
         {
             comboStart = true;
             Time.timeScale = 0.01f;
