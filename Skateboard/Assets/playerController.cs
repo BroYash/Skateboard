@@ -23,7 +23,7 @@ public class playerController : MonoBehaviour
         
     }
 
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
@@ -31,7 +31,7 @@ public class playerController : MonoBehaviour
         sk = FindObjectOfType<Skateboard>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, speed);
         Movement();
@@ -64,22 +64,6 @@ public class playerController : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
 
         animator.SetBool("jump", true);
-    }
-
-    public void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-    }
-
-    public void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.tag == "Ground")
-        {
-            isGrounded = false;
-        }
     }
 
 

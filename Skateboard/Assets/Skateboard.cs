@@ -5,27 +5,13 @@ using UnityEngine;
 public class Skateboard : MonoBehaviour
 {
     public bool isGrounded;
-    private Collider coll;
-
-    private void Start()
-    {
-        coll = GetComponent<Collider>();
-    }
 
 
     public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ground")
+        if (other.collider.tag == "Ground")
         {
             isGrounded = true;
-        }
-    }
-
-    public void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.tag == "Ground")
-        {
-            isGrounded = false;
         }
     }
 }
