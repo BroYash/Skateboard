@@ -41,7 +41,6 @@ public class playerAnimationController : MonoBehaviour
             animator.SetBool("grind", false);
         }*/
 
-
         if (Input.GetKeyDown("k") && skateboard.isGrounded == false)
         {
             comboStart = true;

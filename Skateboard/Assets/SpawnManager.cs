@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        newRoadPosition = new Vector3(2.307844f, 0.4388793f, 42.6f);
+        newRoadPosition = new Vector3(2.307844f, 0.4388793f, 346.5219f);
     }
 
     // Update is called once per frame
@@ -23,6 +23,6 @@ public class SpawnManager : MonoBehaviour
     {
         Instantiate(roadPrefab, transform.position = newRoadPosition, Quaternion.identity);
 
-        newRoadPosition = newRoadPosition + new Vector3(0,0, 42.6f + 1.878134f);
+        newRoadPosition = newRoadPosition + new Vector3(0,0, 87.1f + 1.878134f);
     }
 }

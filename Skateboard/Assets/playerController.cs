@@ -51,9 +51,8 @@ public class playerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && sk.isGrounded)
         {
-                Jump();
+            Jump();
         }
-
     }
 
 
@@ -61,7 +60,6 @@ public class playerController : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
         sk.isGrounded = false;
-
     }
 
 
