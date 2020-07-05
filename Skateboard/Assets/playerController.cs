@@ -14,6 +14,7 @@ public class playerController : MonoBehaviour
     private Animator animator;
     private Rigidbody rb;
     private Collider coll;
+    private Skateboard sk;
 
     private void Awake()
     {
@@ -22,14 +23,15 @@ public class playerController : MonoBehaviour
         
     }
 
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
+        sk = FindObjectOfType<Skateboard>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, speed);
         Movement();
@@ -49,7 +51,7 @@ public class playerController : MonoBehaviour
             rb.velocity = new Vector3(turnSpeed, rb.velocity.y, rb.velocity.z);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && sk.isGrounded)
         {
                 Jump();
         }
@@ -60,25 +62,10 @@ public class playerController : MonoBehaviour
     public void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
-
+        sk.isGrounded = false;
         animator.SetBool("jump", true);
     }
 
-    public void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Ground")
-        {
-            isGrounded = true;
-        }
-    }
-
-    public void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.tag == "Ground")
-        {
-            isGrounded = false;
-        }
-    }
 
 
 }
