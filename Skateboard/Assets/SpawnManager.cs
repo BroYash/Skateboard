@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     private Vector3 newRoadPosition;
 
-    [SerializeField] GameObject roadPrefab;
+    [SerializeField] GameObject roadPrefab = null;
     // Start is called before the first frame update
     void Start()
     {
