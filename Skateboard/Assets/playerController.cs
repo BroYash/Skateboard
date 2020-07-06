@@ -62,6 +62,4 @@ public class playerController : MonoBehaviour
         sk.isGrounded = false;
     }
 
-
-
 }
