@@ -58,8 +58,21 @@ public class playerController : MonoBehaviour
 
     public void Jump()
     {
+
         rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
         sk.isGrounded = false;
+
+    }
+
+    public void moveLeft()
+    {
+        rb.velocity = new Vector3(-turnSpeed, rb.velocity.y, rb.velocity.z);
+
+    }
+
+    public void moveRight()
+    {
+        rb.velocity = new Vector3(turnSpeed, rb.velocity.y, rb.velocity.z);
     }
 
 }
