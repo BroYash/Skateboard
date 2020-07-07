@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 6293548351350503036}
   - component: {fileID: -746376531416441202}
   - component: {fileID: 4561405337352801878}
+  - component: {fileID: 8966680708057197706}
   m_Layer: 0
   m_Name: SM_Veh_Car_Taxi_01
   m_TagString: Untagged
@@ -476,6 +477,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+--- !u!65 &8966680708057197706
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6319301900478233798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1721282, y: 1.496331, z: 5.1654243}
+  m_Center: {x: 0, y: 0.9742627, z: 0.11457074}
 --- !u!1 &6319301900478423986
 GameObject:
   m_ObjectHideFlags: 0

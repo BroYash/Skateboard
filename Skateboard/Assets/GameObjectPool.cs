@@ -5,20 +5,20 @@ using UnityEngine;
 public class GameObjectPool : MonoBehaviour
 {
 
-    public GameObject[] E = new GameObject[4];
+    public GameObject[] E;
     public GameObject roadPrefab;
-    public int roadIndex = 0;
+    public int roadIndex;
     private Vector3 newRoadPosition;
 
-    public GameObject _object;
     private playerController pc;
 
     private void Start()
     {
+        E = new GameObject[4];
+        roadIndex = -1;
         pc = FindObjectOfType<playerController>();
 
-
-        newRoadPosition = new Vector3(2.307844f, 0.4388793f, 0);
+        newRoadPosition = new Vector3(0, 0, 97);
         for (int i = 0; i < 4; i++)
         {
             E[i] = Instantiate(roadPrefab, newRoadPosition, Quaternion.identity);
@@ -28,7 +28,13 @@ public class GameObjectPool : MonoBehaviour
 
     public void spawnRoads()
     {
-        if(roadIndex > E.Length)
+        if(roadIndex == -1)
+        {
+            roadIndex = 0;
+            return;    
+        }
+        Debug.Log(E.Length);
+        if(roadIndex > E.Length-1)
         {
             roadIndex = 0;
         }
