@@ -16,6 +16,10 @@ public class DestroyRoad : MonoBehaviour
 
     private void Update()
     {
+        if (pc != null)
+        {
+
+        }
         if(pc.transform.position.z > _object.transform.position.z)
         {
             Destroy(gameObject);
