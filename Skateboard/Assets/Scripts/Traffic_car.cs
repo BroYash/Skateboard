@@ -29,7 +29,7 @@ public class Traffic_car : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (pc != null)
+        if (collision.gameObject.tag == "Player")
         {
             pc.ToggleDead();
         }

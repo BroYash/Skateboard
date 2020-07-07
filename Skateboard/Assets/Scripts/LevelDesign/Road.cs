@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Road : MonoBehaviour
 {
-    private SpawnManager sm;
+    private SpawnCars car;
+    private GameObjectPool pool;
 
     // Start is called before the first frame update
     void Start()
     {
-        sm = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+        pool = FindObjectOfType<GameObjectPool>();
     }
 
     // Update is called once per frame
@@ -20,6 +21,6 @@ public class Road : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        sm.spawnRoad();
+        
     }
 }

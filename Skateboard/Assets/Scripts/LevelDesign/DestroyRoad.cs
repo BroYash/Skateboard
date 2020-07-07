@@ -6,10 +6,12 @@ public class DestroyRoad : MonoBehaviour
 {
     public GameObject _object;
     private playerController pc;
+    private GameObjectPool pool;
 
     public void Start()
     {
         pc = FindObjectOfType<playerController>();
+        pool = FindObjectOfType<GameObjectPool>();
     }
 
 
@@ -18,7 +20,7 @@ public class DestroyRoad : MonoBehaviour
     {
         if(pc.transform.position.z > _object.transform.position.z)
         {
-            Destroy(gameObject);
+            pool.spawnRoads();
         }
         
     }

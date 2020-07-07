@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     private Vector3 newRoadPosition;
 
     [SerializeField] GameObject roadPrefab = null;
+    public static bool isSpawned = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class SpawnManager : MonoBehaviour
     public void spawnRoad()
     {
         Instantiate(roadPrefab, transform.position = newRoadPosition, Quaternion.identity);
-
+        isSpawned = true;
         newRoadPosition = newRoadPosition + new Vector3(0,0, 97);
     }
 }

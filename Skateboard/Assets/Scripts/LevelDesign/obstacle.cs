@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class obstacle : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    private playerController pc;
+        
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        pc = FindObjectOfType<playerController>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        playerController pc = FindObjectOfType<playerController>();
-        if (pc != null)
+        if (collision.gameObject.tag == "Player")
         {
             pc.ToggleDead();
         }

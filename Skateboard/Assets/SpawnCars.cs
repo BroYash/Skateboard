@@ -9,7 +9,7 @@ public class SpawnCars : MonoBehaviour
     public List<GameObject> spawnRight;
     public GameObject prefab;
 
-    private void Awake()
+    private void Start()    
     {
         SpawnLeft();
         SpawnRight();
