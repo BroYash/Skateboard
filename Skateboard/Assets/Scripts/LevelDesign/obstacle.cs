@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera1 : MonoBehaviour
+public class obstacle : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,15 @@ public class Camera1 : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        playerController pc = FindObjectOfType<playerController>();
+        if (pc != null)
+        {
+            pc.ToggleDead();
+        }
+
     }
 }
