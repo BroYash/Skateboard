@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 9518016}
   - component: {fileID: 642440068468660253}
   - component: {fileID: 9162242567674019844}
-  - component: {fileID: -5064274253360826667}
+  - component: {fileID: 1828491220}
   m_Layer: 0
   m_Name: Character_Female_Jacket_01
   m_TagString: Enemy
@@ -280,8 +280,8 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: 897b34267f422c1499700402763d096e, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -315,8 +315,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &-5064274253360826667
-CapsuleCollider:
+--- !u!65 &1828491220
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -325,10 +325,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &107650
 GameObject:
   m_ObjectHideFlags: 0
