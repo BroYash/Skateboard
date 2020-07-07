@@ -2,40 +2,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class SpawnPattern : MonoBehaviour
 {
-    public GameObject[] objectList;
+    public int column = 3;
+    public int size = 9;
     public float distance = 5.0f;
+
+    public GameObject[] charactersPrefab; 
+
+    private GameObject[] objectList;
     private float nx;
     private float ny;
     private float nz;
     private int c;
+
+    
+   
     // Start is called before the first frame update
 
     void Start()
     {
-
+        
+        Random random = new Random();
 
         nx = transform.position.x - distance;
         ny = transform.position.y;
         nz = transform.position.z - distance;
 
-        GameObject blank = new GameObject();
-        blank.AddComponent<BoxCollider>();
-
-        objectList = new GameObject[9];
+        objectList = new GameObject[size];
         c = 0;
-        for (int i = 0; i < 9; i++)
+        int ranx;
+        int randchar;
+        int randSize = random.Next(1,size+1);
+        for (int i = 0; i < randSize; i++)
         {
+            ranx = random.Next(-1, 1);
+            randchar = random.Next(0,9);
+            objectList[i] = Instantiate(charactersPrefab[randchar], this.transform, false);
+            objectList[i].GetComponent<Transform>().position = new Vector3(nx - ranx, ny, nz - ranx);
             
-            objectList[i] = Instantiate(blank,this.transform,false); ;
-            objectList[i].GetComponent<Transform>().position = new Vector3(nx, ny, nz);
+
             nx += distance;
             c++;
-            if (c == 3)
+            if (c == column)
             {
-                nx -= 3 * distance;
+                nx -= column * distance;
                 nz += distance;
                 c = 0;            
             }
