@@ -13,14 +13,23 @@ public class DestroyRoad : MonoBehaviour
         pool = FindObjectOfType<GameObjectPool>();
     }
 
+    public void Update()
+    {
+        
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (pc.transform.position.z > this.transform.position.z)
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == ("Player"))
         {
-
             pool.spawnRoads();
-
         }
+
     }
 }
