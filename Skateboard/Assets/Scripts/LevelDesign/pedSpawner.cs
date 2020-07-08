@@ -10,8 +10,6 @@ public class pedSpawner : MonoBehaviour
     public int column = 2;
     public int size = 6;
     public float distance = 5.0f;
-    public int spreadx;
-    public int spreadz;
 
     public GameObject charactersPrefab;
     
@@ -96,13 +94,12 @@ public class pedSpawner : MonoBehaviour
 
         int c = 0;
         int ranx;
-        int ranz;
+
 
         for (int i = 0; i < size; i++)
         {
-            ranx = random.Next(-spreadx, spreadx);
-            ranz = random.Next(-spreadz, spreadz);
-            pedList[i].GetComponent<Transform>().position = new Vector3(nx + ranx, ny, nz + ranz);
+            ranx = random.Next(-1, 1);
+            pedList[i].GetComponent<Transform>().position = new Vector3(nx - ranx, ny, nz - ranx);
 
             nx += distance;
             c++;
