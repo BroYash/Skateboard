@@ -13,16 +13,7 @@ public class DestroyRoad : MonoBehaviour
         pool = FindObjectOfType<GameObjectPool>();
     }
 
-    public void Update()
-    {
-        
-    }
 
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
 
