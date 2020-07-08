@@ -15,7 +15,7 @@ public class pedBehaviour : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            // turn off the Player add calls to close the game
+            // kills the player after 3 seconds
             Destroy(collision.gameObject,3.0f); 
                 
         }
