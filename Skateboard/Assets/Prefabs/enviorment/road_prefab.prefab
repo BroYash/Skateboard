@@ -16515,12 +16515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eabc491d42846f54f99911b661666815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLeft:
-  - {fileID: 4362858890165748480}
-  - {fileID: 5151732565648008369}
-  spawnRight:
-  - {fileID: 7825628839949111809}
-  - {fileID: 1449173320110703593}
   prefab: {fileID: 6319301900478233798, guid: b3d3275ab9a8fea4eb0fb38386639ea9, type: 3}
 --- !u!1 &3181351914838840202
 GameObject:
@@ -16531,6 +16525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3181351914838840203}
+  - component: {fileID: 1887807708}
   m_Layer: 0
   m_Name: road_prefab
   m_TagString: Ground
@@ -16566,6 +16561,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1887807708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3181351914838840202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a582733330ca54a4e993b2b85deca425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnLeft:
+  - {fileID: 4362858890165748480}
+  - {fileID: 5151732565648008369}
+  spawnRight:
+  - {fileID: 7825628839949111809}
+  - {fileID: 1449173320110703593}
 --- !u!1 &3182071243998979240
 GameObject:
   m_ObjectHideFlags: 0
