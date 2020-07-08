@@ -8,6 +8,7 @@ public class playerController : MonoBehaviour
     public float jumpHeight = 10f;
     public float turnSpeed = 5f;
     public GameObject spawnPoint;
+    public GameObject background;
 
     private Animator _animator;
     private Rigidbody rb;
@@ -81,6 +82,7 @@ public class playerController : MonoBehaviour
 
     public void ToggleDead()
     {
+        background.transform.parent = null;
         dead = !dead;
         if (dead)
         {
