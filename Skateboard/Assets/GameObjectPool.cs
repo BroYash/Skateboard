@@ -9,8 +9,15 @@ public class GameObjectPool : MonoBehaviour
     public GameObject[] trashCanArray;
 
     public GameObject roadPrefab;
+    public GameObject trashCanPrefab;
+
     public int roadIndex;
+
+    public int tcIndex;
+
     private Vector3 newRoadPosition;
+    private Vector3 trashCanPosition;
+
     private playerController pc;
     private OnRoadSpawn car;
 
@@ -19,15 +26,27 @@ public class GameObjectPool : MonoBehaviour
     private void Start()
     {
         car = FindObjectOfType<OnRoadSpawn>();
-        roadPrefabArray = new GameObject[4];
-        roadIndex = -1;
         pc = FindObjectOfType<playerController>();
 
+        roadPrefabArray = new GameObject[4];
+        roadIndex = -1;
+
+        trashCanArray = new GameObject[6];
+        tcIndex = -1;
+
         newRoadPosition = new Vector3(0, 0, 97);
+        trashCanPosition = new Vector3(-6, 0.1f, 42);
+
         for (int i = 0; i < 4; i++)
         {
             roadPrefabArray[i] = Instantiate(roadPrefab, newRoadPosition, Quaternion.identity);
             newRoadPosition = newRoadPosition + new Vector3(0, 0, 97);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            trashCanArray[i] = Instantiate(trashCanPrefab, trashCanPosition, Quaternion.identity);
+            trashCanPosition = trashCanPosition + new Vector3(0, 0, 97);
         }
     }
 
@@ -53,19 +72,26 @@ public class GameObjectPool : MonoBehaviour
     {
         int i = Random.Range(0, 2);
 
-        if (roadIndex == -1)
+        if (tcIndex == -1)
         {
-            roadIndex = 0;
+            tcIndex = 0;
             return;
         }
-        Debug.Log(roadPrefabArray.Length);
-        if (roadIndex > roadPrefabArray.Length - 1)
+        if (tcIndex > trashCanArray.Length - 1)
         {
-            roadIndex = 0;
+            tcIndex = 0;
         }
-        roadPrefabArray[roadIndex].transform.position = newRoadPosition;
+        
+        if(i == 0)
+        {
+            trashCanArray[tcIndex].transform.position = trashCanPosition;
+        }
+        else
+        {
+            trashCanArray[tcIndex].transform.position = trashCanPosition + new Vector3(13, 0, 0);
+        }
 
-        newRoadPosition = newRoadPosition + new Vector3(0, 0, 97);
-        roadIndex++;
+        trashCanPosition = trashCanPosition + new Vector3(0, 0, 97 + Random.Range(-50, 50));
+        tcIndex++;
     }
 }
