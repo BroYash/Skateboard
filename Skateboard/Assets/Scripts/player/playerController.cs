@@ -17,6 +17,7 @@ public class playerController : MonoBehaviour
 
     [SerializeField] GameObject ragDoll;
     [SerializeField] GameObject characterModel;
+    [SerializeField] GameObject skateboardModel;
 
     [SerializeField]private bool dead;
 
@@ -83,6 +84,9 @@ public class playerController : MonoBehaviour
     public void ToggleDead()
     {
         background.transform.parent = null;
+        skateboardModel.transform.parent = null;
+        skateboardModel.GetComponent<Rigidbody>().velocity = rb.velocity;
+
         dead = !dead;
         if (dead)
         {
