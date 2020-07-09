@@ -7,6 +7,7 @@ public class SpawnCars : MonoBehaviour
 
    
     public GameObject prefab;
+    public static bool isSpawn = false;
 
     public void Spawn(List<GameObject> spawnLeft, List<GameObject> spawnRight)
     {
@@ -22,7 +23,10 @@ public class SpawnCars : MonoBehaviour
     }
     private void SpawnRight(List<GameObject> spawnRight)
     {
+        
         int j = Random.Range(0, spawnRight.Count);
+
+        
         Instantiate(prefab, transform.position = spawnRight[j].transform.position, Quaternion.identity);
     }
 

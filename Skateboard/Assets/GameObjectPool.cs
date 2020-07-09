@@ -63,7 +63,8 @@ public class GameObjectPool : MonoBehaviour
             roadIndex = 0;
         }
         roadPrefabArray[roadIndex].transform.position = newRoadPosition;
-        
+        SpawnCars.isSpawn = true;
+        this.car.spawn();
         newRoadPosition = newRoadPosition + new Vector3(0, 0, 97);
         roadIndex++;
     }
