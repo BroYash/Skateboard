@@ -10,7 +10,7 @@ public class OnRoadSpawn : MonoBehaviour
 
     void Start()
     {
-        spawn();
+        //spawn();
     }
 
     public void spawn()

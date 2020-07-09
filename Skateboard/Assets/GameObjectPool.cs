@@ -43,9 +43,17 @@ public class GameObjectPool : MonoBehaviour
             newRoadPosition = newRoadPosition + new Vector3(0, 0, 97);
         }
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 6; i++)
         {
-            trashCanArray[i] = Instantiate(trashCanPrefab, trashCanPosition, Quaternion.identity);
+            int r = Random.Range(0, 2);
+            if (r == 0)
+            {
+                trashCanArray[i] = Instantiate(trashCanPrefab, trashCanPosition, Quaternion.identity);
+            }
+            else
+            {
+                trashCanArray[i] = Instantiate(trashCanPrefab, trashCanPosition + new Vector3(13, 0, 0), Quaternion.identity);
+            }
             trashCanPosition = trashCanPosition + new Vector3(0, 0, 97);
         }
     }
@@ -71,7 +79,7 @@ public class GameObjectPool : MonoBehaviour
 
     public void spawnTrashCan()
     {
-        int i = Random.Range(0, 2);
+
 
         if (tcIndex == -1)
         {
@@ -82,8 +90,8 @@ public class GameObjectPool : MonoBehaviour
         {
             tcIndex = 0;
         }
-        
-        if(i == 0)
+        int r = Random.Range(0, 2);
+        if (r == 0)
         {
             trashCanArray[tcIndex].transform.position = trashCanPosition;
         }
