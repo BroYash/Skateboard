@@ -21,6 +21,7 @@ public class DestroyRoad : MonoBehaviour
         {
             pool.spawnTrashCan();
             pool.spawnRoads();
+            pool.spawnVehicle();
         }
 
     }
