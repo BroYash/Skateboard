@@ -43,7 +43,11 @@ public class GameObjectPool : MonoBehaviour
             newRoadPosition = newRoadPosition + new Vector3(0, 0, 97);
         }
 
+<<<<<<< HEAD
         for (int i = 0; i < 6; i++)
+=======
+        for (int i = 0; i < 4; i++)
+>>>>>>> parent of a9aa76d... fix car spawn
         {
             int r = Random.Range(0, 2);
             if (r == 0)

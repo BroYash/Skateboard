@@ -21,7 +21,10 @@ public class Traffic_car : MonoBehaviour
     {
 
         rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, speed);
-
+        if(pc.transform.position.z - 10 > this.transform.position.z)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
