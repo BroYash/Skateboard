@@ -924,9 +924,10 @@ MonoBehaviour:
   roadPrefabArray: []
   trashCanArray: []
   vehicleArray: []
-  roadPrefab: {fileID: 5660142068368816608, guid: 861c5ec7a1b9426459ce2ec24b90503f,
+  roadPrefab: {fileID: 4390981614883942118, guid: e321b2e52766e084eab7a1e724da9424,
     type: 3}
-  trashCanPrefab: {fileID: 0}
+  trashCanPrefab: {fileID: 5040822533360089384, guid: c025115deb6a59047b8dbd3a2768aa45,
+    type: 3}
   vehiclePrefab: {fileID: 6319301900478233798, guid: b3d3275ab9a8fea4eb0fb38386639ea9,
     type: 3}
   roadIndex: 0
