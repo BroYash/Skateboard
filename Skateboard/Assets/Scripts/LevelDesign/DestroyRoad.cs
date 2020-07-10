@@ -6,7 +6,6 @@ public class DestroyRoad : MonoBehaviour
 {
     private playerController pc;
     private GameObjectPool pool;
-    public OnRoadSpawn ors;
 
     public void Start()
     {
@@ -20,10 +19,9 @@ public class DestroyRoad : MonoBehaviour
 
         if (other.gameObject.tag == ("Player"))
         {
-            ors.spawn();
-
             pool.spawnTrashCan();
             pool.spawnRoads();
+            pool.spawnVehicle();
         }
 
     }
