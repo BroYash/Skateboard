@@ -49,12 +49,12 @@ public class GameObjectPool : MonoBehaviour
         vehiclePosition2 = new Vector3(2.8f, 0.1f, 53.9f);
 
         for (int i = 0; i < roadPrefabArray.Length; i++)
-            {
+        {
                 roadPrefabArray[i] = Instantiate(roadPrefab, newRoadPosition, Quaternion.identity);
                 newRoadPosition = newRoadPosition + new Vector3(0, 0, 97);
-            }
+        }
         for (int i = 0; i < trashCanArray.Length; i++)
-            {
+        {
                 trashCanArray[i] = Instantiate(trashCanPrefab, trashCanPosition, Quaternion.identity);
                 int r = Random.Range(0, 2);
                 if (r == 0)
@@ -66,7 +66,7 @@ public class GameObjectPool : MonoBehaviour
                     trashCanArray[i] = Instantiate(trashCanPrefab, trashCanPosition + new Vector3(13, 0, 0), Quaternion.identity);
                 }
                 trashCanPosition = trashCanPosition + new Vector3(0, 0, 97);
-            }
+        }
         for (int i = 0; i < vehicleArray.Length; i++)
         {
             vehicleArray[i] = Instantiate(vehiclePrefab, vehiclePosition1, Quaternion.Euler(0f, 180f, 0f));
@@ -94,16 +94,12 @@ public class GameObjectPool : MonoBehaviour
             roadIndex = 0;
         }
         roadPrefabArray[roadIndex].transform.position = newRoadPosition;
-        SpawnCars.isSpawn = true;
-        this.car.spawn();
         newRoadPosition = newRoadPosition + new Vector3(0, 0, 97);
         roadIndex++;
     }
 
     public void spawnTrashCan()
     {
-
-
         if (tcIndex == -1)
         {
             tcIndex = 0;
