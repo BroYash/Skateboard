@@ -44,7 +44,7 @@ public class GameObjectPool : MonoBehaviour
         vehicleIndex = -1;
 
         newRoadPosition = new Vector3(0, 0, 97);
-        trashCanPosition = new Vector3(-6, 0.1f, 42);
+        trashCanPosition = new Vector3(-6, 0, 42);
         vehiclePosition1 = new Vector3(-2.33f, 0.1f, 42);
         vehiclePosition2 = new Vector3(2.8f, 0.1f, 53.9f);
 

@@ -38,8 +38,11 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, speed);
-        Movement();
+        if (dead == false)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, speed);
+            Movement();
+        }
     }
 
 
@@ -65,7 +68,6 @@ public class playerController : MonoBehaviour
 
     public void Jump()
     {
-        //ToggleDead();
         rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
         _skateboard.isGrounded = false;
     }
@@ -87,7 +89,8 @@ public class playerController : MonoBehaviour
         skateboardModel.transform.parent = null;
         skateboardModel.GetComponent<Rigidbody>().velocity = rb.velocity;
 
-        dead = !dead;
+        dead = true;
+        //dead = !dead;
         if (dead)
         {
             CopyTransform(characterModel.transform, ragDoll.transform, rb.velocity);
