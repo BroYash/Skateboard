@@ -242,7 +242,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62046717}
-  m_LocalRotation: {x: 0.15553942, y: 0.0013796678, z: -0.00021723677, w: 0.98782873}
+  m_LocalRotation: {x: 0.15553942, y: 0.0013797018, z: -0.00021724211, w: 0.98782873}
   m_LocalPosition: {x: 2.5724683, y: 5.96, z: -7.224069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -701,7 +701,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954583503}
-  m_LocalRotation: {x: 0.15553942, y: 0.0013796678, z: -0.00021723677, w: 0.98782873}
+  m_LocalRotation: {x: 0.15553942, y: 0.0013797018, z: -0.00021724211, w: 0.98782873}
   m_LocalPosition: {x: 2.5724683, y: 5.96, z: -7.224069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -806,8 +806,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1209647739891242416, guid: e321b2e52766e084eab7a1e724da9424, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e321b2e52766e084eab7a1e724da9424, type: 3}
 --- !u!1 &1426317790
 GameObject:
@@ -1222,6 +1221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obstacles
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049045137384166015, guid: c1fe565cc537a3a428489ac3f9c5e708,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1fe565cc537a3a428489ac3f9c5e708, type: 3}
@@ -2068,10 +2072,10 @@ MonoBehaviour:
   jumpHeight: 6
   turnSpeed: 5
   spawnPoint: {fileID: 1774605237}
-  background: {fileID: 0}
+  background: {fileID: 1426317790}
   ragDoll: {fileID: 2143618232}
   characterModel: {fileID: 8722938275626700237}
-  skateboardModel: {fileID: 0}
+  skateboardModel: {fileID: 776357599}
   dead: 0
 --- !u!64 &8722938275626700240
 MeshCollider:
