@@ -8,10 +8,6 @@ public class playerAnimationController : MonoBehaviour
     [SerializeField]private  Skateboard skateboard;
     [SerializeField]private playerController pc;
 
-    public string playerCombo = "";
-    public int comboCount = 0;
-
-    private bool comboStart = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,70 +27,21 @@ public class playerAnimationController : MonoBehaviour
         {
             animator.SetBool("jump", true);
         }
-        /*
-        if ((Input.GetKey("j")) && (Input.GetKey("l")))
-        {
-            animator.SetBool("grind", true);
-        }
-        else
-        {
-            animator.SetBool("grind", false);
-        }*/
 
         if (Input.GetKeyDown("k") && skateboard.isGrounded == false)
         {
-            comboStart = true;
-            Time.timeScale = 0.01f;
-        }
-        if (comboStart)
-        {
-            combo();
-        }
-    }
-
-    public void combo()
-    {
-        //when trick button is pressed trick is true
-        //player must do a trick
-        if (Input.GetKeyDown("j"))
-        {
-            playerCombo += "j";
-            comboCount += 1;
-        }
-        if (Input.GetKeyDown("i"))
-        {
-            playerCombo += "i";
-            comboCount += 1;
-        }
-        if (Input.GetKeyDown("l"))
-        {
-            playerCombo += "l";
-            comboCount += 1;
-        }
-        if (comboCount >= 3)
-        {
-            Debug.Log("player combo" + playerCombo);
-            comboCount = 0;
-            checkCombo();
-
-            playerCombo = "";
+            int r = Random.Range(0, 2);
+            if (r == 0)
+            {
+                animator.SetTrigger("kickflip");
+            }
+            else if (r == 1)
+            {
+                animator.SetTrigger("360");
+            }
         }
     }
 
-    public void checkCombo()
-    {
-
-        if (playerCombo == "jil")
-        {
-            animator.SetTrigger("kickflip");
-        }
-        if (playerCombo == "jlj")
-        {
-            animator.SetTrigger("360");
-        }
-        Time.timeScale = 1;
-        comboStart = false;
-    }
 }
 
 
