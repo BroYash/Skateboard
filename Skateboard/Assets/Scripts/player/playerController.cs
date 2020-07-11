@@ -98,7 +98,6 @@ public class playerController : MonoBehaviour
         {
             ragDoll.SetActive(false);
             characterModel.SetActive(true);
-
         }
     }
 
