@@ -133,12 +133,13 @@ public class GameObjectPool : MonoBehaviour
         {
             vehicleIndex = 0;
         }
-        vehicleArray[vehicleIndex].transform.position = vehiclePosition1;  
-        vehiclePosition1 = vehiclePosition1 + new Vector3(0, 0, 97);
+        vehicleArray[vehicleIndex].transform.position = vehiclePosition1;
         vehicleIndex++;
         vehicleArray[vehicleIndex].transform.position = vehiclePosition2;
-        vehiclePosition2 = vehiclePosition2 + new Vector3(0, 0, 97);
         vehicleIndex++;
+        vehiclePosition1 = vehiclePosition1 + new Vector3(0, 0, 97);
+        vehiclePosition2 = vehiclePosition2 + new Vector3(0, 0, 97);
+
     }
 }
 
