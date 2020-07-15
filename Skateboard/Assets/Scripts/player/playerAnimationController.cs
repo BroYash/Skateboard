@@ -42,6 +42,19 @@ public class playerAnimationController : MonoBehaviour
         }
     }
 
+
+    public void doTrick()
+    {
+        int r = Random.Range(0, 2);
+        if (r == 0)
+        {
+            animator.SetTrigger("kickflip");
+        }
+        else if (r == 1)
+        {
+            animator.SetTrigger("360");
+        }
+    }
 }
 
 

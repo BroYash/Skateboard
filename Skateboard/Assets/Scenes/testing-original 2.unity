@@ -326,7 +326,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62046717}
-  m_LocalRotation: {x: 0.15553942, y: 0.0013796678, z: -0.00021723677, w: 0.98782873}
+  m_LocalRotation: {x: 0.15553942, y: 0.0013797018, z: -0.00021724211, w: 0.98782873}
   m_LocalPosition: {x: 2.5724683, y: 5.96, z: -7.224069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -525,7 +525,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 252600505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8722938275626700239}
+        m_MethodName: moveLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &252600505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,8 +688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.1, y: -17.5}
-  m_SizeDelta: {x: 583.8439, y: 398.26855}
+  m_AnchoredPosition: {x: -3.5, y: 9.9}
+  m_SizeDelta: {x: 810.7731, y: 330.19904}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531326131
 MonoBehaviour:
@@ -722,7 +733,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 531326132}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8722938275626700239}
+        m_MethodName: Jump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &531326132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,6 +1194,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870373565}
   m_Mesh: {fileID: 4300004, guid: feaca7a0cbb9b1540940bac6ce5e5501, type: 3}
+--- !u!1001 &886021390
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 20.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140684, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513806658114140686, guid: d3ff0795ca618d14498e75c634b49f90,
+        type: 3}
+      propertyPath: m_Name
+      value: pedSpawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3ff0795ca618d14498e75c634b49f90, type: 3}
 --- !u!1 &942364478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1388,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954583503}
-  m_LocalRotation: {x: 0.15553942, y: 0.0013796678, z: -0.00021723677, w: 0.98782873}
+  m_LocalRotation: {x: 0.15553942, y: 0.0013797018, z: -0.00021724211, w: 0.98782873}
   m_LocalPosition: {x: 2.5724683, y: 5.96, z: -7.224069}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1586,7 +1677,7 @@ PrefabInstance:
     - target: {fileID: 4390981614883942119, guid: e321b2e52766e084eab7a1e724da9424,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 4390981614883942119, guid: e321b2e52766e084eab7a1e724da9424,
         type: 3}
@@ -1721,7 +1812,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1325229006}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8722938275626700239}
+        m_MethodName: moveRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1325229006
 MonoBehaviour:
   m_ObjectHideFlags: 0
