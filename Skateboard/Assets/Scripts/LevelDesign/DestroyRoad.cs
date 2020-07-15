@@ -20,8 +20,9 @@ public class DestroyRoad : MonoBehaviour
         if (other.gameObject.tag == ("Player"))
         {
             pool.spawnTrashCan();
-            pool.spawnRoads();
             pool.spawnVehicle();
+            pool.spawnRoads();
+            
         }
 
     }

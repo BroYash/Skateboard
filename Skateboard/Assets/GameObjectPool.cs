@@ -41,7 +41,7 @@ public class GameObjectPool : MonoBehaviour
         tcIndex = -1;
 
         vehicleArray = new GameObject[10];
-        vehicleIndex = -1;
+        vehicleIndex = 0;
 
         newRoadPosition = new Vector3(0, 0, 97);
         trashCanPosition = new Vector3(-6, 0, 42);
@@ -77,6 +77,8 @@ public class GameObjectPool : MonoBehaviour
             vehiclePosition1 = vehiclePosition1 + new Vector3(0, 0, 97);
             vehiclePosition2 = vehiclePosition2 + new Vector3(0, 0, 97);
         }
+        Debug.Log("Finda pos 1" + vehiclePosition1);
+        Debug.Log("Finda pos 2" + vehiclePosition2);
 
 
     }
@@ -133,12 +135,14 @@ public class GameObjectPool : MonoBehaviour
         {
             vehicleIndex = 0;
         }
+       
         vehicleArray[vehicleIndex].transform.position = vehiclePosition1;
         vehicleIndex++;
         vehicleArray[vehicleIndex].transform.position = vehiclePosition2;
         vehicleIndex++;
         vehiclePosition1 = vehiclePosition1 + new Vector3(0, 0, 97);
         vehiclePosition2 = vehiclePosition2 + new Vector3(0, 0, 97);
+
 
     }
 }

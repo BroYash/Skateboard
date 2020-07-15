@@ -9,12 +9,15 @@ public class Traffic_car : MonoBehaviour
     private Rigidbody rb;
     private Collider coll;
     private playerController pc;
+    private GameObjectPool pool;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         pc = FindObjectOfType<playerController>();
+        pool = FindObjectOfType<GameObjectPool>();
     }
 
     private void Update()
