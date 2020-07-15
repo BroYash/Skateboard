@@ -63,7 +63,7 @@ public class GameObjectPool : MonoBehaviour
                 }
                 else
                 {
-                    trashCanArray[i] = Instantiate(trashCanPrefab, trashCanPosition + new Vector3(13, 0, 0), Quaternion.identity);
+                    trashCanArray[i] = Instantiate(trashCanPrefab, trashCanPosition + new Vector3(12, 0, 0), Quaternion.identity);
                 }
                 trashCanPosition = trashCanPosition + new Vector3(0, 0, 97);
         }
@@ -118,9 +118,8 @@ public class GameObjectPool : MonoBehaviour
         }
         else
         {
-            trashCanArray[tcIndex].transform.position = trashCanPosition + new Vector3(13, 0, 0);
+            trashCanArray[tcIndex].transform.position = trashCanPosition + new Vector3(12, 0, 0);
         }
-
         trashCanPosition = trashCanPosition + new Vector3(0, 0, 97 + Random.Range(-50, 50));
         tcIndex++;
     }

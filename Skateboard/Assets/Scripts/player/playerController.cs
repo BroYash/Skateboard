@@ -68,8 +68,11 @@ public class playerController : MonoBehaviour
 
     public void Jump()
     {
-        rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
-        _skateboard.isGrounded = false;
+        if (_skateboard.isGrounded)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
+            _skateboard.isGrounded = false;
+        }
     }
 
     public void moveLeft()
@@ -125,4 +128,5 @@ public class playerController : MonoBehaviour
             CopyTransform(source, destination, velocity);
         }
     }
+
 }
