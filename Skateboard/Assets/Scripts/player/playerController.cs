@@ -52,11 +52,11 @@ public class playerController : MonoBehaviour
 
         if(h < 0)
         {
-            rb.velocity = new Vector3(-turnSpeed, rb.velocity.y, rb.velocity.z);
+            moveLeft();
         }
         else if (h > 0)
         {
-            rb.velocity = new Vector3(turnSpeed, rb.velocity.y, rb.velocity.z);
+            moveRight();
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && _skateboard.isGrounded)
@@ -71,19 +71,29 @@ public class playerController : MonoBehaviour
         if (_skateboard.isGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
+            //.AddForce(0,800, 0);
+
             _skateboard.isGrounded = false;
         }
     }
 
     public void moveLeft()
     {
-        rb.velocity = new Vector3(-turnSpeed, rb.velocity.y, rb.velocity.z);
+        //rb.velocity = new Vector3(-turnSpeed, rb.velocity.y, rb.velocity.z);
+        if (_skateboard.isGrounded)
+        {
+            rb.AddForce(-500, 0, 0);
+        }
 
     }
 
     public void moveRight()
     {
-        rb.velocity = new Vector3(turnSpeed, rb.velocity.y, rb.velocity.z);
+        //rb.velocity = new Vector3(turnSpeed, rb.velocity.y, rb.velocity.z);
+        if (_skateboard.isGrounded)
+        {
+            rb.AddForce(500, 0, 0);
+        }
     }
 
     public void ToggleDead()
